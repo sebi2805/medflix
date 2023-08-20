@@ -2,9 +2,9 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 
-const CristinaSection = () => {
+const PresentationSection = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
-  const [typeText, setTypeText] = useState("");
+  const [isVisible, setIsVisible] = useState(false); // New state
 
   const handleScroll = () => {
     const position = window.pageYOffset;
@@ -21,40 +21,34 @@ const CristinaSection = () => {
 
   useEffect(() => {
     if (scrollPosition > 300) {
-      // Adjust as per your needs
-      const text =
-        "Cristina, 22 years old... intrat la buget la facultate... tutoring others...";
-      let index = 0;
-
-      // Clear any previous interval before setting a new one
-      const interval = setInterval(() => {
-        if (index < text.length) {
-          setTypeText((prev) => prev + text[index]);
-          index++;
-        } else {
-          clearInterval(interval);
-        }
-      }, 100);
-
-      return () => clearInterval(interval);
+      setIsVisible(true);
     }
   }, [scrollPosition]);
 
+  const textAnimationClass = isVisible
+    ? "opacity-100 translate-y-0"
+    : "opacity-0 translate-y-4";
+
   return (
-    <section className="min-h-[calc(100vh-4em)] bg-darkGreen-200 w-full flex flex-col-reverse md:flex-row items-start justify-center">
-      <div className="flex max-w-5xl w-full">
+    <section className="h-screen bg-darkGreen-200 w-full flex justify-center">
+      <div className="flex max-w-5xl w-full flex-col md:flex-row h-full">
         {/* Text part */}
         <div className="flex-1 p-6">
-          <div className="font-serif text-4xl">{typeText}</div>
+          <div
+            className={`font-serif text-xl md:text-4xl transition-all duration-700 transform ${textAnimationClass}`}
+          >
+            Cristina, 22 years old... intrat la buget la facultate... tutoring
+            others...
+          </div>
         </div>
 
         {/* Image part */}
-        <div className="flex-1 p-6 sticky top-0">
+        <div className="flex-1 p-6 sticky top-0 h-[50vh] md:h-screen w-screen md:w-[50vh]">
           <Image
             src="/placeholder.jpg"
             alt="Cristina's Picture"
-            width={500}
-            height={500}
+            style={{ objectFit: "cover" }}
+            fill
             className="rounded-[16px]"
           />
         </div>
@@ -63,4 +57,4 @@ const CristinaSection = () => {
   );
 };
 
-export default CristinaSection;
+export default PresentationSection;

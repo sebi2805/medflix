@@ -22,7 +22,10 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
   const [isModalOpen, setIsModalOpen] = React.useState(false);
   const cardBaseClasses =
     "border rounded-lg p-8 m-4 shadow-lg transition-all duration-500 transform bg-gradient-to-tr from-darkGreen-100 to-darkGreen-300 hover:scale-105";
-  const cardSizeClasses = bigger ? "w-80 h-120" : "w-72 h-96";
+  const cardSizeClasses = bigger
+    ? "w-96 h-120 md:w-96 md:h-140"
+    : "w-80 h-96 md:w-80 md:h-120";
+
   const combinedClasses = `${cardBaseClasses} ${cardSizeClasses}`;
 
   return (

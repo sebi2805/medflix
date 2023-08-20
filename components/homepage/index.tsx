@@ -1,3 +1,4 @@
+import ChapterSection from "./Chapter";
 import CountdownSection from "./CountdownSection";
 import PresentationSection from "./PresentationSection";
 import ServicesSection from "./ServicesSection";
@@ -11,6 +12,7 @@ export default function HomePage() {
       <CountdownSection targetDate={targetDate} />
       <PresentationSection />
       <ServicesSection />
+      <ChapterSection />
     </div>
   );
 }

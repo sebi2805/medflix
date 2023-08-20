@@ -3,20 +3,22 @@ import { Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import Link from "next/link";
 import MenuIcon from "../icons/MenuIcon";
+import Image from "next/image";
 
 export default function Navbar() {
   return (
     <Popover
       as="header"
-      className="bg-darkGreen-500 shadow-md sticky top-0 z-50 w-full"
+      className="bg-darkGreen-500 shadow-md fixed top-0 z-50 w-full"
     >
       {({ open }) => (
         <>
           <div className="container mx-auto px-6 py-4">
             <div className="flex items-center justify-between">
-              <div className="text-white text-2xl font-bold">
+              <div className="text-white text-2xl font-bold flex items-center">
+                <Image src="/logo.png" alt="logo" width={50} height={50} />
                 <Link href="/" className="hover:text-lightGreen-300">
-                  BrandName
+                  MedFlix
                 </Link>
               </div>
               <div className="hidden md:flex space-x-4">
@@ -74,7 +76,10 @@ export default function Navbar() {
           </div>
 
           {/* Mobile Menu */}
-          <Popover.Panel as="nav" className="md:hidden">
+          <Popover.Panel
+            as="nav"
+            className="absolute w-full top-16 z-40 bg-darkGreen-500 shadow-md md:hidden"
+          >
             <div className="container mx-auto px-6 py-4">
               <div className="grid gap-4">
                 <Link
