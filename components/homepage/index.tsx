@@ -1,5 +1,6 @@
 import CountdownSection from "./CountdownSection";
 import PresentationSection from "./PresentationSection";
+import ServicesSection from "./ServicesSection";
 
 export default function HomePage() {
   const targetDate = new Date("December 25, 2023 00:00:00"); // Placeholder for Christmas
@@ -9,6 +10,7 @@ export default function HomePage() {
       {/* Countdown Section */}
       <CountdownSection targetDate={targetDate} />
       <PresentationSection />
+      <ServicesSection />
     </div>
   );
 }

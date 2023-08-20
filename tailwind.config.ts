@@ -15,6 +15,10 @@ module.exports = {
       duration: {
         1000: "1000ms",
       },
+      scale: {
+        101: "1.01",
+        90: ".9",
+      },
       colors: {
         whiteBackground: "#ececec",
         darkGreen: {
