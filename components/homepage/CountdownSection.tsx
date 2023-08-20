@@ -61,21 +61,23 @@ const CountdownSection: React.FC<CountdownProps> = ({ targetDate }) => {
           <Spinner />
         ) : (
           <>
-            <div>
-              <p className="text-5xl font-bold text-white">{timeLeft.days}</p>
+            <div className="flex flex-col items-center">
+              <p className="text-5xl font-bold text-white [text-shadow:_0_1px_0_var(--tw-shadow-color)]">
+                {timeLeft.days}
+              </p>
               <p className="text-white">Days</p>
             </div>
-            <div>
+            <div className="flex flex-col items-center">
               <p className="text-5xl font-bold text-white">{timeLeft.hours}</p>
               <p className="text-white">Hours</p>
             </div>
-            <div>
+            <div className="flex flex-col items-center">
               <p className="text-5xl font-bold text-white">
                 {timeLeft.minutes}
               </p>
               <p className="text-white">Minutes</p>
             </div>
-            <div>
+            <div className="flex flex-col items-center">
               <p className="text-5xl font-bold text-white">
                 {timeLeft.seconds}
               </p>
