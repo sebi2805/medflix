@@ -20,15 +20,15 @@ export default function RootLayout({
     <html lang="ro">
       <head>
         <Script
+          strategy="lazyOnload"
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-DVKW4GBQ2C"
         ></Script>
-        <Script>
+        <Script strategy="lazyOnload">
           {`window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-DVKW4GBQ2C');`}
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+           gtag('config', 'G-DVKW4GBQ2C');`}
         </Script>
         <link
           rel="stylesheet"
