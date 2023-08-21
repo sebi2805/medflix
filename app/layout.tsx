@@ -1,6 +1,8 @@
 import LayoutWrapper from "@/components/layout";
 import "./globals.css";
 import type { Metadata } from "next";
+import AcceptCookie from "@/components/layout/AcceptCookies";
+import { cookies } from "next/headers";
 
 export const metadata: Metadata = {
   title: "MedFlix",
@@ -12,6 +14,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const cookiesAccepted = cookies()?.get("flash-cards-cookie")?.value;
   return (
     <html lang="ro">
       <body>
@@ -55,7 +58,7 @@ export default function RootLayout({
           type="image/png"
           sizes="32x32"
         />
-
+        {cookiesAccepted !== "true" && <AcceptCookie />}
         <LayoutWrapper>
           <main className="w-full pt-[4em]">{children}</main>
         </LayoutWrapper>
