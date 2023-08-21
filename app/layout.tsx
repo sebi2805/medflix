@@ -22,9 +22,10 @@ export default function RootLayout({
         <Script
           strategy="lazyOnload"
           async
+          id="my-script"
           src="https://www.googletagmanager.com/gtag/js?id=G-DVKW4GBQ2C"
         ></Script>
-        <Script strategy="lazyOnload">
+        <Script strategy="lazyOnload" id="my-script-2">
           {`window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
