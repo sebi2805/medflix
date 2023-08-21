@@ -6,11 +6,27 @@ import CloseIcon from "../icons/CloseIcon";
 interface ContactModalProps {
   isOpen: boolean;
   onClose: () => void;
+  selectedSlot?: {
+    start: Date;
+    end: Date;
+  };
 }
-
-const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
+const ContactModal: React.FC<ContactModalProps> = ({
+  isOpen,
+  onClose,
+  selectedSlot,
+}) => {
   const [email, setEmail] = React.useState("");
-  const [message, setMessage] = React.useState("");
+  const defaultMsg = React.useMemo(
+    () =>
+      selectedSlot
+        ? `Vreau sa fac o programare pe data de ${selectedSlot.start.toLocaleDateString(
+            "ro-RO"
+          )} intre orele ${selectedSlot.start.getHours()} si ${selectedSlot.end.getHours()}?`
+        : "",
+    [selectedSlot]
+  );
+  const [message, setMessage] = React.useState(defaultMsg);
 
   const handleContactSubmit = () => {
     window.location.href = `mailto:youremail@example.com?subject=Contact from ${email}&body=${message}`;
@@ -56,6 +72,7 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
                   Your Email:
                 </label>
                 <input
+                  placeholder="Emailul tau..."
                   type="email"
                   id="email"
                   name="email"
@@ -73,6 +90,7 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
                   Your Message:
                 </label>
                 <textarea
+                  placeholder="Mesajul tau.."
                   id="message"
                   name="message"
                   rows={4}

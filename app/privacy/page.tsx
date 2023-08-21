@@ -19,10 +19,10 @@ const PrivacyPolicy: React.FC = () => {
 
   return (
     <div className="bg-gray-50 min-h-screen px-4 py-12 flex flex-col justify-center sm:px-6 lg:px-8">
-      <div className="prose prose-purple mx-auto w-full max-w-3xl p-8 rounded-lg bg-white shadow text-left">
+      <div className="prose prose-darkGreen mx-auto w-full max-w-3xl p-8 rounded-lg bg-white shadow text-left">
         <h1 className="text-3xl text-center font-bold mb-8">Privacy Policy</h1>
 
-        <div className="pl-5 border-l-4 border-purple-400">
+        <div className="pl-5 border-l-4 border-darkGreen-400">
           <p className="mb-4">
             Your privacy is important to us. It is our policy to respect your
             privacy and comply with any applicable law and regulation regarding
@@ -34,7 +34,7 @@ const PrivacyPolicy: React.FC = () => {
 
         <h2 className="text-2xl mt-6 mb-4">Information We Collect</h2>
 
-        <div className="pl-5 border-l-4 border-purple-400">
+        <div className="pl-5 border-l-4 border-darkGreen-400">
           <p className="mb-4">
             Information we collect includes both information you knowingly and
             actively provide us when using or participating in any of our
@@ -45,7 +45,7 @@ const PrivacyPolicy: React.FC = () => {
 
         <h3 className="text-xl mt-4 mb-2">Log Data</h3>
 
-        <div className="pl-5 border-l-4 border-purple-400">
+        <div className="pl-5 border-l-4 border-darkGreen-400">
           <p className="mb-4">
             When you visit our website, our servers may automatically log the
             standard data provided by your web browser. It may include your
@@ -59,7 +59,7 @@ const PrivacyPolicy: React.FC = () => {
 
         <h3 className="text-xl mt-4 mb-2">Personal Information</h3>
 
-        <div className="pl-5 border-l-4 border-purple-400">
+        <div className="pl-5 border-l-4 border-darkGreen-400">
           <p className="mb-4">
             We may ask for personal information which may include one or more of
             the following:
@@ -74,7 +74,7 @@ const PrivacyPolicy: React.FC = () => {
 
         <h2 className="text-2xl mt-6 mb-4">Use of Your Personal Information</h2>
 
-        <div className="pl-5 border-l-4 border-purple-400">
+        <div className="pl-5 border-l-4 border-darkGreen-400">
           <p className="mb-4">We may use your personal information to:</p>
 
           <ul className="list-disc pl-5">
@@ -88,7 +88,7 @@ const PrivacyPolicy: React.FC = () => {
           Your Rights and Controlling Your Personal Information
         </h2>
 
-        <div className="pl-5 border-l-4 border-purple-400">
+        <div className="pl-5 border-l-4 border-darkGreen-400">
           <p className="mb-4">
             You always retain the right to withhold personal information from
             us, with the understanding that your experience of our website may
@@ -99,7 +99,7 @@ const PrivacyPolicy: React.FC = () => {
 
         <h2 className="text-2xl mt-6 mb-4">Changes to This Policy</h2>
 
-        <div className="pl-5 border-l-4 border-purple-400">
+        <div className="pl-5 border-l-4 border-darkGreen-400">
           <p className="mb-4">
             We may update our privacy policy from time to time to reflect
             changes to our information practices. We encourage you to
@@ -110,7 +110,7 @@ const PrivacyPolicy: React.FC = () => {
 
         <h2 className="text-2xl mt-6 mb-4">Contact Us</h2>
 
-        <div className="pl-5 border-l-4 border-purple-400">
+        <div className="pl-5 border-l-4 border-darkGreen-400">
           <p className="mb-4">
             For any questions or concerns regarding your privacy, you may
             contact us using the following details:
@@ -122,7 +122,7 @@ const PrivacyPolicy: React.FC = () => {
           <input
             type="text"
             name="name"
-            placeholder="Your Name"
+            placeholder="Numele tau..."
             onChange={handleChange}
             value={formData.name}
             className="w-full border border-gray-300 p-2 rounded-md"
@@ -130,14 +130,14 @@ const PrivacyPolicy: React.FC = () => {
           <input
             type="email"
             name="email"
-            placeholder="Your Email"
+            placeholder="Emailul tau..."
             onChange={handleChange}
             value={formData.email}
             className="w-full border border-gray-300 p-2 rounded-md"
           />
           <textarea
             name="message"
-            placeholder="Your Message"
+            placeholder="Mesajul tau..."
             //@ts-ignore
             onChange={handleChange}
             value={formData.message}
@@ -150,7 +150,7 @@ const PrivacyPolicy: React.FC = () => {
           >
             <button
               type="submit"
-              className="w-full py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-purple-600 hover:bg-purple-700"
+              className="w-full py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-darkGreen-600 hover:bg-darkGreen-700"
             >
               Send Message
             </button>

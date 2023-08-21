@@ -22,15 +22,9 @@ export default function Navbar() {
                 </Link>
               </div>
               <div className="hidden md:flex space-x-4">
-                <Link
-                  href="/about"
-                  className="text-white hover:text-lightGreen-300"
-                >
-                  About
-                </Link>
                 <Popover className="relative">
                   <Popover.Button className="text-white hover:text-lightGreen-300">
-                    Services
+                    Servicii
                   </Popover.Button>
                   <Transition
                     as={Fragment}
@@ -45,16 +39,16 @@ export default function Navbar() {
                       <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
                         <div className="relative bg-white p-4 grid gap-4">
                           <Link
-                            href="/services/web"
+                            href="/services"
                             className="text-darkGreen-600 hover:bg-darkGreen-100 hover:text-darkGreen-900 block px-2 py-2 rounded-md"
                           >
-                            Web Development
+                            Parcurgerea materialelor
                           </Link>
                           <Link
-                            href="/services/app"
+                            href="/services"
                             className="text-darkGreen-600 hover:bg-darkGreen-100 hover:text-darkGreen-900 block px-2 py-2 rounded-md"
                           >
-                            App Development
+                            Rezolvarea grilelor
                           </Link>
                         </div>
                       </div>
@@ -82,15 +76,9 @@ export default function Navbar() {
           >
             <div className="container mx-auto px-6 py-4">
               <div className="grid gap-4">
-                <Link
-                  href="/about"
-                  className="text-white hover:text-lightGreen-300"
-                >
-                  About
-                </Link>
                 <Popover className="relative">
                   <Popover.Button className="text-white hover:text-lightGreen-300">
-                    Services
+                    Servicii
                   </Popover.Button>
                   <Transition
                     as={Fragment}
@@ -105,16 +93,16 @@ export default function Navbar() {
                       <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
                         <div className="relative bg-white p-4 grid gap-4">
                           <Link
-                            href="/services/web"
+                            href="/services"
                             className="text-darkGreen-600 hover:bg-darkGreen-100 hover:text-darkGreen-900 block px-2 py-2 rounded-md"
                           >
-                            Web Development
+                            Parcurgerea materialelor
                           </Link>
                           <Link
-                            href="/services/app"
+                            href="/services"
                             className="text-darkGreen-600 hover:bg-darkGreen-100 hover:text-darkGreen-900 block px-2 py-2 rounded-md"
                           >
-                            App Development
+                            Rezolvarea grilelor
                           </Link>
                         </div>
                       </div>
