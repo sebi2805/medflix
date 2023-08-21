@@ -2,15 +2,15 @@ import { MetadataRoute } from "next";
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   return [
     {
-      url: "https://medflix.com",
+      url: "https://medflix.education",
       lastModified: new Date(),
     },
     {
-      url: "https://medflix.com/services",
+      url: "https://medflix.education/services",
       lastModified: new Date(),
     },
     {
-      url: "https://medflix.com/contact",
+      url: "https://medflix.education/contact",
       lastModified: new Date(),
     },
   ];
