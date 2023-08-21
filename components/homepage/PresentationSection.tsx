@@ -37,12 +37,11 @@ const PresentationSection = () => {
           <div
             className={`font-serif text-center text-xl md:text-4xl transition-all duration-700 transform ${textAnimationClass}`}
           >
-            Salutare viitorilor studenți în domeniul medical! Mă numesc Cristina
-            și am 20 de ani. După ce am reușit să intru la buget la Facultatea
-            de Medicină, am decis să împărtășesc cunoștințele mele cu cei care
-            aspiră să calce pe aceleași urme. Cred cu tărie că, cu dedicație și
-            ghidarea potrivită, oricine poate atinge succesul în această
-            domeniu.
+            Mă numesc Cristina și am 20 de ani. După ce am reușit să intru la
+            buget la Facultatea de Medicină, am decis să împărtășesc
+            cunoștințele mele cu cei care aspiră să calce pe aceleași urme. Cred
+            cu tărie că, cu dedicație și ghidarea potrivită, oricine poate
+            atinge succesul.
           </div>
         </div>
 

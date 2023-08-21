@@ -13,8 +13,8 @@ const FirstSection: React.FC = () => {
         className="mt-4 text-xl px-4 relative z-2 text-white"
         style={{ zIndex: 10 }}
       >
-        Oferim servicii de pregătire pentru examenul de admitere la facultatea
-        de medicină.
+        Oferim servicii de pregătire pentru examenul de bacalaureat la
+        disciplina anatomie și fiziologie umană.
       </p>
       <Image
         src="/hero-4.jpeg"

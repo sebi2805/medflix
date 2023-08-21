@@ -16,7 +16,7 @@ const AnnouncementModal: React.FC = () => {
       if (!getCookie("medflix-announcement")) {
         setFreeSessionModalOpen(true);
       }
-    }, 10000);
+    }, 1000);
 
     return () => clearTimeout(timer);
   }, []);
@@ -30,13 +30,13 @@ const AnnouncementModal: React.FC = () => {
     <Transition appear show={isFreeSessionModalOpen} as={Fragment}>
       <Dialog
         as="div"
-        className="fixed top-[50px] inset-0 z-10 overflow-y-auto flex items-center justify-center"
+        className="fixed inset-0 z-10 overflow-y-auto flex items-center justify-center"
         onClose={() => setFreeSessionModalOpen(false)}
       >
-        <div className="min-h-screen px-4 text-center ">
+        <div className="flex items-center justify-center min-h-screen px-4 text-center">
           <Dialog.Overlay className="fixed inset-0 bg-black opacity-70" />
 
-          <div className="relative inline-block w-full max-w-lg p-6 my-16 overflow-hidden text-left align-middle transition-all transform bg-white shadow-2xl rounded-2xl border border-gray-200">
+          <div className="inline-block w-full max-w-lg p-6 overflow-hidden text-left align-middle transition-all transform bg-white shadow-2xl rounded-2xl border border-gray-200">
             <Dialog.Title
               as="h3"
               className="text-xl font-bold leading-6 text-center text-gray-900 mb-4"

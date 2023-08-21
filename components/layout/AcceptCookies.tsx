@@ -44,7 +44,7 @@ const AcceptCookie: React.FC = () => {
           <div className="space-x-4">
             <button
               type="button"
-              className="py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+              className="py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-darkGreen-600 hover:bg-darkGreen-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
               onClick={acceptCookies}
             >
               Accept Cookies

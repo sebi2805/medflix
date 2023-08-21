@@ -24,7 +24,7 @@ const ContactModal: React.FC<ContactModalProps> = ({
       const startHour = selectedDateRange.start.getHours();
       const endHour = selectedDateRange.end.getHours();
       setMessage(
-        `Vreau sa fac o programare pe data de ${selectedDateRange.start.toLocaleDateString()} intre orele ${startHour} si ${endHour}?`
+        `Vreau sa fac o programare pe data de ${selectedDateRange.start.toLocaleDateString()} intre orele ${startHour} si ${endHour}.`
       );
     }
   }, [selectedDateRange]);
