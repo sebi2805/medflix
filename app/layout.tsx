@@ -3,6 +3,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import AcceptCookie from "@/components/layout/AcceptCookies";
 import { cookies } from "next/headers";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "MedFlix",
@@ -17,7 +18,18 @@ export default function RootLayout({
   const cookiesAccepted = cookies()?.get("flash-cards-cookie")?.value;
   return (
     <html lang="ro">
-      <body>
+      <head>
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-DVKW4GBQ2C"
+        ></Script>
+        <Script>
+          {`window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-DVKW4GBQ2C');`}
+        </Script>
         <link
           rel="stylesheet"
           type="text/css"
@@ -58,6 +70,8 @@ export default function RootLayout({
           type="image/png"
           sizes="32x32"
         />
+      </head>
+      <body>
         {cookiesAccepted !== "true" && <AcceptCookie />}
         <LayoutWrapper>
           <main className="w-full pt-[4em]">{children}</main>

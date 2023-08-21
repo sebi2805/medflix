@@ -72,38 +72,30 @@ export const ServicesSection = () => {
           ref={cardsRef}
         >
           <ServiceCard
-            title="Service 1"
-            price={99}
-            benefits={["Benefit 1", "Benefit 2", "Benefit 3"]}
-            style={{
-              transform: isVisible ? "translateX(0)" : "translateX(-100%)",
-              opacity: isVisible ? 1 : 0,
-            }}
+            title="Parcurgerea materialelor, grup"
+            price={40}
+            benefits={[
+              "Parcurgerea celor 11 capitole",
+              "Libertatea de a alege capitolele",
+            ]}
           />
 
           <ServiceCard
-            title="Service 2"
-            price={199}
-            benefits={["Benefit A", "Benefit B", "Benefit C"]}
-            bigger
-            style={{
-              transform: isVisible
-                ? "scale(1.2) translateY(0)"
-                : "scale(1) translateY(100%)",
-              opacity: isVisible ? 1 : 0,
-              boxShadow: "0 15px 25px rgba(0, 0, 0, 0.2)",
-              zIndex: 1,
-            }}
+            title="Rezolvare testelor, particular"
+            price={60}
+            benefits={[
+              "Rezolvarea testelor si examenelor din anii trecuti",
+              "Explicarea raspunsurilor",
+            ]}
           />
 
           <ServiceCard
-            title="Service 3"
-            price={299}
-            benefits={["Benefit X", "Benefit Y", "Benefit Z"]}
-            style={{
-              transform: isVisible ? "translateX(0)" : "translateX(100%)",
-              opacity: isVisible ? 1 : 0,
-            }}
+            title="Parcurgerea materialelor, particular"
+            price={50}
+            benefits={[
+              "Consolidarea cunostintelor pentru grile",
+              "Access materiale",
+            ]}
           />
         </div>
       </div>
