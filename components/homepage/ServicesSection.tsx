@@ -47,10 +47,10 @@ export const ServicesSection = () => {
             </div>
             <div className="px-1" id="carousel-package">
               <ServiceCard
-                title="Rezolvare grile, particular"
+                title="Rezolvare testelor, particular"
                 price={60}
                 benefits={[
-                  "Rezolvarea grilelor din anii trecuti",
+                  "Rezolvarea testelor si examenelor din anii trecuti",
                   "Explicarea raspunsurilor",
                 ]}
               />
@@ -60,7 +60,7 @@ export const ServicesSection = () => {
                 title="Parcurgerea materialelor, particular"
                 price={50}
                 benefits={[
-                  "Consolidarea cunostiintelor pentru grile",
+                  "Consolidarea cunostintelor pentru grile",
                   "Access materiale",
                 ]}
               />
