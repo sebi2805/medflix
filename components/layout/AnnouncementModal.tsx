@@ -16,7 +16,7 @@ const AnnouncementModal: React.FC = () => {
       if (!getCookie("medflix-announcement")) {
         setFreeSessionModalOpen(true);
       }
-    }, 1000);
+    }, 5000);
 
     return () => clearTimeout(timer);
   }, []);
