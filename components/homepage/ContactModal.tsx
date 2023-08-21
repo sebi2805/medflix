@@ -3,34 +3,44 @@ import { Dialog, Transition } from "@headlessui/react";
 import React from "react";
 import { MFButton } from "../common/MFButton";
 import CloseIcon from "../icons/CloseIcon";
+import { Event } from "../services/CalendarSection";
 interface ContactModalProps {
   isOpen: boolean;
   onClose: () => void;
-  selectedSlot?: {
-    start: Date;
-    end: Date;
-  };
+  selectedDateRange?: { start: Date; end: Date };
+  onConfirm?: (event: Event) => void;
 }
 const ContactModal: React.FC<ContactModalProps> = ({
   isOpen,
   onClose,
-  selectedSlot,
+  selectedDateRange,
+  onConfirm,
 }) => {
   const [email, setEmail] = React.useState("");
-  const defaultMsg = React.useMemo(
-    () =>
-      selectedSlot
-        ? `Vreau sa fac o programare pe data de ${selectedSlot.start.toLocaleDateString(
-            "ro-RO"
-          )} intre orele ${selectedSlot.start.getHours()} si ${selectedSlot.end.getHours()}?`
-        : "",
-    [selectedSlot]
-  );
-  const [message, setMessage] = React.useState(defaultMsg);
+  const [message, setMessage] = React.useState("");
+
+  React.useEffect(() => {
+    if (selectedDateRange) {
+      const startHour = selectedDateRange.start.getHours();
+      const endHour = selectedDateRange.end.getHours();
+      setMessage(
+        `Vreau sa fac o programare pe data de ${selectedDateRange.start.toLocaleDateString()} intre orele ${startHour} si ${endHour}?`
+      );
+    }
+  }, [selectedDateRange]);
 
   const handleContactSubmit = () => {
+    const event: Event = {
+      id: Date.now().toString(),
+      title: "Programare în așteptare",
+      start: selectedDateRange!.start,
+      end: selectedDateRange!.end,
+      color: "#588577",
+    };
+    onConfirm?.(event);
     window.location.href = `mailto:youremail@example.com?subject=Contact from ${email}&body=${message}`;
   };
+
   return (
     <Transition appear show={isOpen} as={Fragment}>
       <Dialog

@@ -5,38 +5,63 @@ import "react-big-calendar/lib/css/react-big-calendar.css";
 import ContactModal from "../homepage/ContactModal";
 const localizer = momentLocalizer(moment);
 
+export interface Event {
+  id: string;
+  title: string;
+  start: Date;
+  end: Date;
+  color: string;
+}
+
+const generateEventsForMonth = (): Event[] => {
+  const events = [];
+  const now = new Date();
+  const daysInMonth = new Date(
+    now.getFullYear(),
+    now.getMonth() + 1,
+    0
+  ).getDate();
+
+  for (let i = 1; i <= daysInMonth; i += 7) {
+    for (let j = 0; j < 3; j++) {
+      const eventDate = new Date(now.getFullYear(), now.getMonth(), i + j);
+      events.push({
+        id: `${i + j}`,
+        title: `Event ${i + j}`,
+        start: new Date(now.getFullYear(), now.getMonth(), i + j, 10),
+        end: new Date(now.getFullYear(), now.getMonth(), i + j, 12),
+        color: "#588577",
+      });
+    }
+  }
+  return events;
+};
+
 const CalendarSection = (props: any) => {
   const [isModalOpen, setIsModalOpen] = React.useState(false);
-  const [selectedTimeSlot, setSelectedTimeSlot] = React.useState<{
-    start: Date;
-    end: Date;
-  }>({
-    start: new Date(),
-    end: new Date(),
-  });
-  const events = [
-    {
-      id: 0,
-      title: "Study Group Session 1",
-      start: moment().startOf("week").add(2, "days").add(10, "hours").toDate(),
-      end: moment().startOf("week").add(2, "days").add(12, "hours").toDate(),
-      color: "#588577",
-    },
-    {
-      id: 1,
-      title: "Study Group Session 2",
-      start: moment().startOf("week").add(4, "days").add(15, "hours").toDate(),
-      end: moment().startOf("week").add(4, "days").add(17, "hours").toDate(),
-      color: "#588577",
-    },
-    {
-      id: 2,
-      title: "Particular Study Session",
-      start: moment().startOf("week").add(3, "days").add(14, "hours").toDate(),
-      end: moment().startOf("week").add(3, "days").add(16, "hours").toDate(),
-      color: "#588577",
-    },
-  ];
+  const [selectedRange, setSelectedRange] = React.useState<
+    | {
+        start: Date;
+        end: Date;
+      }
+    | undefined
+  >(undefined);
+
+  const handleSelectSlot = (slotInfo: { start: Date; end: Date }) => {
+    setSelectedRange({ start: slotInfo.start, end: slotInfo.end });
+    setIsModalOpen(true);
+  };
+
+  const handleModalConfirm = (event: Event) => {
+    setEvents((prev) => [...prev, event]);
+    setIsModalOpen(false);
+  };
+  const [events, setEvents] = React.useState<Event[]>([]);
+
+  React.useEffect(() => {
+    const defaultEvents = generateEventsForMonth();
+    setEvents(defaultEvents);
+  }, []);
 
   const eventStyleGetter = (
     event: any,
@@ -62,10 +87,7 @@ const CalendarSection = (props: any) => {
     <>
       <div style={{ height: "500px" }}>
         <Calendar
-          onSelectSlot={(slotInfo) => {
-            setIsModalOpen(true);
-            setSelectedTimeSlot({ start: slotInfo.start, end: slotInfo.end });
-          }}
+          onSelectSlot={handleSelectSlot}
           selectable={true}
           localizer={localizer}
           events={events}
@@ -79,7 +101,8 @@ const CalendarSection = (props: any) => {
       <ContactModal
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
-        selectedSlot={selectedTimeSlot}
+        selectedDateRange={selectedRange}
+        onConfirm={handleModalConfirm}
       />
     </>
   );

@@ -35,17 +35,21 @@ const PresentationSection = () => {
         {/* Text part */}
         <div className="flex-1 p-6">
           <div
-            className={`font-serif text-xl md:text-4xl transition-all duration-700 transform ${textAnimationClass}`}
+            className={`font-serif text-center text-xl md:text-4xl transition-all duration-700 transform ${textAnimationClass}`}
           >
-            Cristina, 22 years old... intrat la buget la facultate... tutoring
-            others...
+            Salutare viitorilor studenți în domeniul medical! Mă numesc Cristina
+            și am 20 de ani. După ce am reușit să intru la buget la Facultatea
+            de Medicină, am decis să împărtășesc cunoștințele mele cu cei care
+            aspiră să calce pe aceleași urme. Cred cu tărie că, cu dedicație și
+            ghidarea potrivită, oricine poate atinge succesul în această
+            domeniu.
           </div>
         </div>
 
         {/* Image part */}
         <div className="flex-1 p-6 sticky top-0 h-[50vh] md:h-screen w-screen md:w-[50vh]">
           <Image
-            src="/placeholder.jpg"
+            src="/hero-2.jpg"
             alt="Cristina's Picture"
             style={{ objectFit: "cover" }}
             fill

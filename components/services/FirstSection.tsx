@@ -1,14 +1,29 @@
 import React from "react";
+import Image from "next/image";
 const FirstSection: React.FC = () => {
   return (
-    <div className="max-w-3xl mx-auto text-center">
-      <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-        Our Services
+    <div className="w-screen flex items-center justify-center flex-col h-[500px] text-center relative">
+      <h2
+        className="text-3xl relative z-2 font-extrabold tracking-tight text-white sm:text-4xl"
+        style={{ zIndex: 10 }}
+      >
+        Servicii
       </h2>
-      <p className="mt-4 text-lg text-gray-500">
-        Explore our wide range of personalized services, crafted meticulously to
-        support your journey through 11 chapters and numerous exams.
+      <p
+        className="mt-4 text-xl px-4 relative z-2 text-white"
+        style={{ zIndex: 10 }}
+      >
+        Oferim servicii de pregătire pentru examenul de admitere la facultatea
+        de medicină.
       </p>
+      <Image
+        src="/hero-4.jpeg"
+        alt="hero"
+        fill
+        style={{
+          objectFit: "cover",
+        }}
+      />
     </div>
   );
 };

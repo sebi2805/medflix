@@ -31,29 +31,38 @@ export const ServicesSection = () => {
   }, []);
 
   return (
-    <div className="bg-whiteBackground min-h-screen flex items-center">
+    <div className="bg-whiteBackground md:min-h-screen flex items-center">
       <div className="container mx-auto md:px-4">
-        <div className="w-screen h-screen md:hidden overflow-hidden">
+        <div className="w-screen md:h-screen md:hidden overflow-hidden">
           <CarouselWrapper title={"Servicii"}>
             <div className="px-1" id="carousel-package">
               <ServiceCard
-                title="Service 1"
-                price={99}
-                benefits={["Benefit 1", "Benefit 2", "Benefit 3"]}
+                title="Parcurgerea materialelor, grup"
+                price={40}
+                benefits={[
+                  "Parcurgerea celor 11 capitole",
+                  "Libertatea de a alege capitolele",
+                ]}
               />
             </div>
             <div className="px-1" id="carousel-package">
               <ServiceCard
-                title="Service 2"
-                price={199}
-                benefits={["Benefit A", "Benefit B", "Benefit C"]}
+                title="Rezolvare grile, particular"
+                price={60}
+                benefits={[
+                  "Rezolvarea grilelor din anii trecuti",
+                  "Explicarea raspunsurilor",
+                ]}
               />
             </div>
             <div className="px-1" id="carousel-package">
               <ServiceCard
-                title="Service 3"
-                price={299}
-                benefits={["Benefit X", "Benefit Y", "Benefit Z"]}
+                title="Parcurgerea materialelor, particular"
+                price={50}
+                benefits={[
+                  "Consolidarea cunostiintelor pentru grile",
+                  "Access materiale",
+                ]}
               />
             </div>
           </CarouselWrapper>

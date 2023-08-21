@@ -1,7 +1,7 @@
 import { GetServerSidePropsContext } from "next";
 import { ParsedUrlQuery } from "querystring";
 
-type CookieName = "medflix-cookie";
+type CookieName = "medflix-cookie" | "medflix-announcement";
 
 export const deleteCookie = (name: CookieName) => {
   document.cookie = name + "=;path=/; expires=Thu, 01 Jan 1970 00:00:01 GMT;";

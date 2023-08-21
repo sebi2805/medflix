@@ -6,7 +6,7 @@ import { usePathname, useRouter } from "next/navigation";
 import React from "react";
 
 const AcceptCookie: React.FC = () => {
-  const [isVisible, setIsVisible] = React.useState(true);
+  const [isVisible, setIsVisible] = React.useState(false);
   const pathname = usePathname();
   const router = useRouter();
   const acceptCookies = () => {

@@ -1,9 +1,9 @@
 "use client";
-import { Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
-import Link from "next/link";
-import MenuIcon from "../icons/MenuIcon";
 import Image from "next/image";
+import Link from "next/link";
+import { Fragment } from "react";
+import MenuIcon from "../icons/MenuIcon";
 
 export default function Navbar() {
   return (
