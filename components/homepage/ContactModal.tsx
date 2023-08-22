@@ -38,7 +38,7 @@ const ContactModal: React.FC<ContactModalProps> = ({
       color: "#588577",
     };
     onConfirm?.(event);
-    window.location.href = `mailto:youremail@example.com?subject=Contact from ${email}&body=${message}`;
+    window.location.href = `mailto:cristinavalentinavica@gmail.com?subject=Contact from ${email}&body=${message}`;
   };
 
   return (

@@ -144,7 +144,7 @@ const PrivacyPolicy: React.FC = () => {
             className="w-full border border-gray-300 p-2 rounded-md"
           />
           <a
-            href={`mailto:admin@tantor-cards.com?subject=${
+            href={`mailto:cristinavalentinavica@gmail.com?subject=${
               "I need help, " + formData.name
             }&body=${formData.message}%20goes%20here`}
           >

@@ -7,7 +7,7 @@ const ContactMe: React.FC = () => {
   const [message, setMessage] = React.useState("");
 
   const handleContactSubmit = () => {
-    window.location.href = `mailto:youremail@example.com?subject=Contact from ${email}&body=${message}`;
+    window.location.href = `mailto:cristinavalentinavica@gmail.com?subject=Contact from ${email}&body=${message}`;
   };
 
   return (
