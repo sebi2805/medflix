@@ -10,9 +10,7 @@ const SecondSection: React.FC = () => {
               Meditații Grup
             </h3>
             <p className="mt-3 text-base text-gray-500">
-              Join our group meditation sessions. Feel the collective energy and
-              motivation, helping you progress through the chapters with clarity
-              and focus.
+              Alatura-te altor studenti pentru a face meditatii.
             </p>
           </div>
         </div>
@@ -26,9 +24,7 @@ const SecondSection: React.FC = () => {
               Parcurgerea Materialelor
             </h3>
             <p className="mt-3 text-base text-gray-500">
-              Dive deep into the curriculum with our comprehensive walkthrough
-              of materials. We ensure that every topic is well-understood,
-              setting a strong foundation for your exams.
+              Impreuna putem parcurge capitole necesare examenului.
             </p>
           </div>
         </div>

@@ -66,7 +66,7 @@ const ContactModal: React.FC<ContactModalProps> = ({
             </Dialog.Title>
             <button
               onClick={onClose}
-              className="absolute top-2 right-2 p-2 rounded-full hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
+              className="absolute top-2 right-2 p-2 rounded-full hover:bg-gray-100 "
             >
               <CloseIcon />
             </button>
@@ -111,12 +111,15 @@ const ContactModal: React.FC<ContactModalProps> = ({
               </div>
 
               <div className="flex justify-between items-center">
-                <a
-                  href="https://wa.me/yourPhoneNumber" // replace with your phone number in international format
-                  className="block mt-3 text-green-500 hover:underline"
-                >
-                  Chat on WhatsApp
-                </a>
+                <div>
+                  <a
+                    href="https://wa.me/+40728076496"
+                    className="block mt-3 text-green-500 hover:underline"
+                  >
+                    Chat on WhatsApp
+                  </a>
+                  +40 728 076 496
+                </div>
                 <MFButton className="mt-4" onClick={handleContactSubmit}>
                   Send Email
                 </MFButton>

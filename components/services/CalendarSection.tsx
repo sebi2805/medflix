@@ -22,14 +22,19 @@ const generateEventsForMonth = (): Event[] => {
     0
   ).getDate();
 
-  for (let i = 1; i <= daysInMonth; i += 7) {
-    for (let j = 0; j < 3; j++) {
-      const eventDate = new Date(now.getFullYear(), now.getMonth(), i + j);
+  // Define the specific weekdays to include (0 = Sunday, 1 = Monday, etc.)
+  const targetWeekdays = [1, 3, 5];
+
+  for (let i = 1; i <= daysInMonth; i++) {
+    const eventDate = new Date(now.getFullYear(), now.getMonth(), i);
+    const dayOfWeek = eventDate.getDay();
+
+    if (targetWeekdays.includes(dayOfWeek)) {
       events.push({
-        id: `${i + j}`,
-        title: `Event ${i + j}`,
-        start: new Date(now.getFullYear(), now.getMonth(), i + j, 10),
-        end: new Date(now.getFullYear(), now.getMonth(), i + j, 12),
+        id: `${i}`,
+        title: `Grupa ${(i % 3) + 1}`,
+        start: new Date(now.getFullYear(), now.getMonth(), i, 10),
+        end: new Date(now.getFullYear(), now.getMonth(), i, 12),
         color: "#588577",
       });
     }

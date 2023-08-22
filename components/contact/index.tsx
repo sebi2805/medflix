@@ -59,12 +59,15 @@ const ContactMe: React.FC = () => {
         ></textarea>
 
         <div className="flex justify-between items-center mt-4">
-          <a
-            href="https://wa.me/yourPhoneNumber"
-            className="text-green-500 hover:underline"
-          >
-            Chat on WhatsApp
-          </a>
+          <div className="flex items-start flex-col">
+            <a
+              href="https://wa.me/+40728076496"
+              className="text-green-500 hover:underline mr-2"
+            >
+              Chat on WhatsApp
+            </a>
+            +40 728 076 496
+          </div>
           <MFButton onClick={handleContactSubmit}>Trimite Email</MFButton>
         </div>
       </div>

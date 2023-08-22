@@ -22,11 +22,12 @@ export default function Navbar() {
                 </Link>
               </div>
               <div className="hidden md:flex space-x-4">
-                <Popover className="relative">
-                  <Popover.Button className="text-white hover:text-lightGreen-300">
-                    Servicii
-                  </Popover.Button>
-                </Popover>
+                <Link
+                  href="/services"
+                  className="text-white hover:text-lightGreen-300"
+                >
+                  Servicii
+                </Link>
                 <Link
                   href="/contact"
                   className="text-white hover:text-lightGreen-300"
@@ -48,11 +49,12 @@ export default function Navbar() {
           >
             <div className="container mx-auto px-6 py-4">
               <div className="grid gap-4">
-                <Popover className="relative">
-                  <Popover.Button className="text-white hover:text-lightGreen-300">
-                    Servicii
-                  </Popover.Button>
-                </Popover>
+                <Link
+                  href="/services"
+                  className="text-white hover:text-lightGreen-300"
+                >
+                  Servicii
+                </Link>
                 <Link
                   href="/contact"
                   className="text-white hover:text-lightGreen-300"
