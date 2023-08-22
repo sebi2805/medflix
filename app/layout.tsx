@@ -6,7 +6,7 @@ import { cookies } from "next/headers";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "MedFlix - Pregătire Admitere Medicină",
+  title: "MedFlix - Pregătire biologie si chimie",
   description:
     "Platforma de meditații pentru pregătirea la admitere în biologie și chimie pentru UMFCD Carol Davila. Cursuri, tutoriale și resurse pentru candidații la facultatea de medicină.",
 };
