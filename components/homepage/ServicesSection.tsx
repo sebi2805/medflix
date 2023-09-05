@@ -73,7 +73,7 @@ export const ServicesSection = () => {
         >
           <ServiceCard
             title="Parcurgerea materialelor, grup"
-            price={40}
+            price={50}
             benefits={[
               "Parcurgerea celor 11 capitole",
               "Libertatea de a alege capitolele",
@@ -82,7 +82,7 @@ export const ServicesSection = () => {
 
           <ServiceCard
             title="Rezolvare testelor, particular"
-            price={60}
+            price={70}
             benefits={[
               "Rezolvarea testelor si examenelor din anii trecuti",
               "Explicarea raspunsurilor",
@@ -91,7 +91,7 @@ export const ServicesSection = () => {
 
           <ServiceCard
             title="Parcurgerea materialelor, particular"
-            price={50}
+            price={60}
             benefits={[
               "Consolidarea cunostintelor pentru grile",
               "Access materiale",
